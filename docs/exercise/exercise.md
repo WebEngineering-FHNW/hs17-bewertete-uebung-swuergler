@@ -2,9 +2,19 @@
 
 ## Commit Proposal
 
-Matriculation Number: <to be filled by student>
+Matriculation Number: 16-660-631
 
 Project idea short description: 
+If you're in a group, there tasks that no one wants to do
+or feels responsible for (Clean blackboard, empty trash or whatever).
+Often the same person is doing this job.
+
+This web application should be a simple solution for this problem.
+
+* Every user can add tasks with a small description
+* All the created tasks should be visible for the users
+* The Administrator of the group can randomly and automatically assign the tasks
+* Every user can view the assigned tasks
 
 
 ## Project confirmation
