@@ -19,7 +19,11 @@ This web application should be a simple solution for this problem.
 
 ## Project confirmation
 
-< to be filled by lecturer>
+Confirmed.
+
+This problem is usually called "tragedy of the commons" where the Swiss word
+is probably "Allmende" (this might be a good name for your project).
+I look very much forward to see your solution.
 
 
 ## Project delivery <to be filled by student>
