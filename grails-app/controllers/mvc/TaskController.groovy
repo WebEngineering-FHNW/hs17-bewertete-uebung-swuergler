@@ -4,18 +4,18 @@ class TaskController {
     static scaffold = Task
 
     //TODO: find a way to get «logged in» user
+    User someone = new User()
 
-    ArrayList<Task> allTasks = new ArrayList<>();
 
     def newTask(String taskTitle, String taskDescription) {
-        allTasks.add(new Task(taskTitle: taskTitle, taskDescription: taskDescription, done: false, User: "not real user"))
+        //TODO: Add to domain
     }
 
     def myTasks() {
-        def user = "not real user"
-        //TODO: find all tasks with user xyz
-        render view: "myTasks", model: [user: user]
+        def myTasks = Task.findByAssignee(someone)
+        [myTasks: myTasks]
     }
+
 
     def allTasks() {
         def allTasks = Task.list()
