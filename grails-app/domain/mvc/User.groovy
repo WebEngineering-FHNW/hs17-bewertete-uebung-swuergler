@@ -6,6 +6,9 @@ class User {
     String password
     boolean adminUser
 
+    static hasMany = [tasks: Task]
+    static belongsTo = [squad: Squad]
+
     static constraints = {
         username (unique: true)
         password (password: true)

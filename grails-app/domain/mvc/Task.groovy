@@ -6,6 +6,8 @@ class Task {
     boolean done
     User assignee
 
+    static belongsTo = [user: User]
+
     static constraints = {
         taskTitle (unique: true)
     }
