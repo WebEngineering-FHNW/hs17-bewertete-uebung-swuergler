@@ -14,11 +14,11 @@ class BootStrap {
 
         Person dierk = save(new Person(firstName: "Dierk", lastName: "König", email:"dierk.koenig@fhnw.ch"))
 
-        //TODO
-        //Group test  = save(new Group(groupname: "Test"))
-        //User admin = save (new User(group: test, username: "admin", password: "123", adminUser: true))
 
-
+        Squad test  = save(new Squad(squadname: "Test"))
+        User admin = save (new User(squad: test, username: "admin", password: "123", adminUser: true))
+        Task testTask = save(new Task(taskTitle: "empty bin", taskDescription: "empty all bins in office", done: false, assignee: admin))
+        Task testTask2 = save(new Task(taskTitle: "clean room", taskDescription: "clean office room", done: false, assignee: admin))
 
         Date today = new Date().clearTime();
         save(new Booking(booker: dierk, room: windowRoom, date: today - 1, slot: Booking.AM))

@@ -11,4 +11,12 @@ class User {
         password (password: true)
     }
 
+    String toString() {
+        "$username"
+    }
+
+    Character getInitials() {
+        return username.charAt(0)
+    }
+
 }
