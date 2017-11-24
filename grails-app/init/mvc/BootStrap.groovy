@@ -14,6 +14,12 @@ class BootStrap {
 
         Person dierk = save(new Person(firstName: "Dierk", lastName: "König", email:"dierk.koenig@fhnw.ch"))
 
+        //TODO
+        //Group test  = save(new Group(groupname: "Test"))
+        //User admin = save (new User(group: test, username: "admin", password: "123", adminUser: true))
+
+
+
         Date today = new Date().clearTime();
         save(new Booking(booker: dierk, room: windowRoom, date: today - 1, slot: Booking.AM))
         save(new Booking(booker: dierk, room: windowRoom, date: today,     slot: Booking.AM))

@@ -3,6 +3,7 @@ package mvc
 // import grails.rest.Resource
 
 // @Resource
+
 class Room {
 
     String name

@@ -6,7 +6,7 @@ class Task {
     boolean done;
 
     static constraints = {
-        //taskTitle (unique: true)
+        taskTitle (unique: true)
     }
 
 }
