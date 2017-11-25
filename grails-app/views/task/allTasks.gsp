@@ -6,6 +6,7 @@
     </title>
 </head>
 <body>
+
 <table border="1">
     <g:each in="${allTasks}" var="thisTask">
         <tr>

@@ -6,6 +6,7 @@ class User {
     String password
     boolean adminUser
 
+
     static hasMany = [tasks: Task]
     static belongsTo = [squad: Squad]
 
@@ -18,8 +19,5 @@ class User {
         "$username"
     }
 
-    Character getInitials() {
-        return username.charAt(0)
-    }
 
 }

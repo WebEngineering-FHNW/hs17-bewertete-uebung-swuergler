@@ -1,19 +1,15 @@
 package mvc
 
 class TaskController {
+
     static scaffold = Task
 
     //TODO: find a way to get «logged in» user
-    User someone = new User()
-
-
-    def newTask(String taskTitle, String taskDescription) {
-        //TODO: Add to domain
-    }
 
     def myTasks() {
-        def myTasks = Task.findByAssignee(someone)
-        [myTasks: myTasks]
+        //def myTasks = Task.findAllByAssignee()
+        //[myTasks: myTasks]
+        [userInstanceList: User.list()]
     }
 
 
@@ -21,4 +17,10 @@ class TaskController {
         def allTasks = Task.list()
         [allTasks: allTasks]
     }
+
+    def getInitials() {
+        def initials = Task.list().assignee.toString().charAt(0)
+        render view: "allTasks", model: [initials: initials]
+    }
+
 }
