@@ -6,6 +6,11 @@ class Task {
     boolean done
     User assignee
 
+    String toString() {
+        "$taskTitle"
+    }
+
+
     static constraints = {
         taskTitle (unique: true)
     }
@@ -13,7 +18,5 @@ class Task {
     static mapping = {
         done defaultValue: false
     }
-
-
 
 }
