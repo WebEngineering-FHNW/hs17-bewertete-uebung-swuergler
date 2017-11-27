@@ -2,12 +2,19 @@
 <html>
 <head>
     <title>
-        Dear ${ user }, these are your tasks
+        Dear <sec:username/>, these are your tasks
     </title>
 </head>
 <body>
 
-<p> display tasks here </p>
+<table border="1">
+    <g:each in="${myTasks}" var="thisTask">
+        <tr>
+            <td>${ thisTask.taskTitle }</td>
+            <td>${ thisTask.taskDescription }</td>
+        </tr>
+    </g:each>
+</table>
 
 </body>
 </html>

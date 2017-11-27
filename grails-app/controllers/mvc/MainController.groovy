@@ -7,7 +7,7 @@ class MainController {
 
     def index() {
 
-        def username = "sam"
-        [user: username]
+        //def username = "sam"
+        //[user: username]
     }
 }

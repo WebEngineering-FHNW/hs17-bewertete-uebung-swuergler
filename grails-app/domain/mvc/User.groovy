@@ -22,6 +22,11 @@ class User implements Serializable {
 	boolean accountLocked
 	boolean passwordExpired
 
+    String toString() {
+        "$username"
+    }
+
+
 	Set<Role> getAuthorities() {
 		(UserRole.findAllByUserNew(this) as List<UserRole>)*.role as Set<Role>
 	}

@@ -6,13 +6,18 @@ class Task {
     boolean done
     User assignee
 
+
     String toString() {
         "$taskTitle"
     }
 
+    User getAssignee() {
+        return this.assignee
+    }
 
     static constraints = {
         taskTitle (unique: true)
+        assignee(nullable: true)
     }
 
     static mapping = {
