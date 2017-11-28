@@ -12,6 +12,7 @@ class AdminController {
 
         def tasksToAssign = Task.list()
         def users = User.list()
+        Random random = new Random();
 
         // Collect unassigned tasks
         for(int i=0; i<tasksToAssign.size(); i++) {
@@ -20,15 +21,9 @@ class AdminController {
             }
         }
 
-        tasksToAssign.stream().forEach { e -> e.setAssignee(users.get(2)) }
+        // +- 1 is to exclude the admin from tasks
+        tasksToAssign.stream().forEach { e -> e.setAssignee(users.get(random.nextInt((int)users.size()-1)+1)) }
 
-        /*
-        for(int i=0; i<tasksToAssign.size(); i++) {
-            tasksToAssign.add(i, tasksToAssign.get(i).setAssignee(users.get(1)))
-        }
-        */
-
-        
 
         [tasksToAssign: tasksToAssign]
 
