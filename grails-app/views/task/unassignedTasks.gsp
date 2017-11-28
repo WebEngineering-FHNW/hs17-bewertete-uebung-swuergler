@@ -1,21 +1,25 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="form" content="main"/>
+    <meta name="layout" content="main" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'card.css')}">
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'bootstrap.css')}">
     <title>
         All tasks
     </title>
 </head>
 <body>
 
-    <table border="1">
+    <div id="all_cards">
         <g:each in="${unassignedTasks}" var="thisTask">
-            <tr>
-                <td>${ thisTask.taskTitle }</td>
-                <td>${ thisTask.taskDescription }</td>
-            </tr>
+            <div class="card">
+                <div class="container">
+                    <h4><b>${ thisTask.taskTitle }</b></h4>
+                    <p>${ thisTask.taskDescription }</p>
+                    <p>Assignee: ${ thisTask.assignee }</p>
+                </div>
+            </div>
         </g:each>
-    </table>
-
+    </div>
 </body>
 </html>

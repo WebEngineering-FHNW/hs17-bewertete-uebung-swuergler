@@ -7,7 +7,7 @@
   </title>
   <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 
-  <asset:stylesheet src="form.css"/>
+  <asset:stylesheet src="bootstrap.css"/>
 
   %{--<asset:javascript src="form_validation.js"/>--}%
 
