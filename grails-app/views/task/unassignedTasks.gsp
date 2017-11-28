@@ -8,7 +8,7 @@
 <body>
 
     <table border="1">
-        <g:each in="${allTasks}" var="thisTask">
+        <g:each in="${unassignedTasks}" var="thisTask">
             <tr>
                 <td>${ thisTask.taskTitle }</td>
                 <td>${ thisTask.taskDescription }</td>

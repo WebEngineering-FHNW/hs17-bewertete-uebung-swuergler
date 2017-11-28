@@ -7,12 +7,20 @@ class Task {
     User assignee
 
 
+    def index() {
+
+    }
+
     String toString() {
         "$taskTitle"
     }
 
     User getAssignee() {
         return this.assignee
+    }
+
+    void setAssignee(User user) {
+        this.assignee = user
     }
 
     static constraints = {
