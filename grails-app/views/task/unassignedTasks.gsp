@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <meta name="form" content="main"/>
     <title>
         All tasks
     </title>
