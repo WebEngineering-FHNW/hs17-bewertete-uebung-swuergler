@@ -6,11 +6,6 @@ class Task {
     boolean done
     User assignee
 
-
-    def index() {
-
-    }
-
     String toString() {
         "$taskTitle"
     }

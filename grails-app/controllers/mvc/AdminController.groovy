@@ -8,6 +8,7 @@ class AdminController {
 
     }
 
+    // Randomly assign open tasks to user
     def assign() {
 
         def tasksToAssign = Task.findAllByAssignee(null)
@@ -21,13 +22,4 @@ class AdminController {
         [tasksToAssign: tasksToAssign]
 
     }
-
-    def assign2(Task task) {
-        def users = User.list()
-        Random random = new Random()
-        if (task.getAssignee() == null){
-            task.setAssignee(users.get(random.nextInt((int)users.size()-1)+1))
-        }
-    }
-
 }
