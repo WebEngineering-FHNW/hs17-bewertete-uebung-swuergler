@@ -11,7 +11,7 @@
     <content tag="nav">
         <a href="/task/allTasks">Login</a>
         <a href="/logout">Logout</a>
-        <a href="About.html">About</a>
+        <a href="about/index">About</a>
     </content>
 
     <div id="content" role="main">
