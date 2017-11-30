@@ -9,6 +9,16 @@
     </title>
 </head>
 <body>
+    <content tag="nav">
+        <div id="nav-left">
+            <img src="../../assets/images/task_roulette.png" alt="Task roulette" height="20">
+        </div>
+        
+        <div id="nav-right">
+            <a href="/logout">Logout</a>
+            <a href="../../about/index">About</a>
+        </div>    
+    </content>
 
     <div id="all-cards">
         <g:each in="${allTasks}" var="thisTask">
@@ -21,6 +31,18 @@
                 </div>
         </g:each>
     </div>
+
+    <form action="../task/create">
+        <input type="submit" value="New task" />
+    </form>
+
+    <form action="../task/unassignedTasks">
+        <input type="submit" value="Show unassigned tasks" />
+    </form>
+
+    <form action="../admin/assign">
+        <input type="submit" value="Assign open tasks" />
+    </form>
 
 </body>
 </html>

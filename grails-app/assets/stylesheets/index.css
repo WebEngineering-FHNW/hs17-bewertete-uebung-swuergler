@@ -4,3 +4,17 @@ body {
     background-size: 120%;
     background-repeat: no-repeat;
 }
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 85px;
+}
+
+#content {
+    margin-left: 10%;
+    margin-top: 20%
+}
+
+#nav-left {
+    alignment: left;
+}

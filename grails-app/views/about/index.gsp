@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'bootstrap.css')}">
     <title>
         About allmende
     </title>
