@@ -27,6 +27,7 @@ h5 {
 }
 
 h6 {
+    font-family: 'Lobster';
     text-align: right;
     margin-right: 20px;
 }
@@ -61,15 +62,17 @@ a {
 }
 
 #buttons-bottom {
-    margin-top: 5%;
-    margin-left: 30%;
+    margin-top: 10%;
+    margin-left: 38%;
     margin-bottom: 10%;
 }
 
-#button-center {
+#button-center-all {
     margin-top: 10%;
-    margin-left: 40%;
+    margin-left: 45%;
+    margin-bottom: 10%;
 }
+
 
 #no-tasks {
     margin-top: 5%;

@@ -24,7 +24,7 @@
 
         <h1>Create a new task</h1>
 
-        <div id="create-task" class="content scaffold-create" role="main">
+        <div id="create-containter" class="content scaffold-create" role="main">
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -37,12 +37,16 @@
             </g:hasErrors>
             <g:form action="save">
                 <fieldset class="form">
-                    <f:all bean="task"/>
+                    <h2>Title</h2>
+                    <f:field property="taskTitle" label=" "></f:field>
+                    <h2>Description</h2>
+                    <f:field property="taskDescription" label=" "></f:field>
                 </fieldset>
-                <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                <fieldset class="buttons" id="button-create">
+                    <g:submitButton name="create" class="btn btn-primary" value="create" />
                 </fieldset>
             </g:form>
+
         </div>
 
     </body>

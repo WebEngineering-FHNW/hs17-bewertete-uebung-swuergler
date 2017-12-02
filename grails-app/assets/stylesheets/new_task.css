@@ -5,17 +5,24 @@ h1 {
 }
 
 h2 {
-    text-align: right;
-    margin-right: 20px;
+    font-size: 20px;
+    text-align: center;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 15px;
+    text-align: center;
 }
 
 h4 {
     font-size: 15px;
     font-weight: normal;
+    text-align: center;
+}
+
+h5 {
+    font-size: 30px;
+    font-weight: lighter;
     text-align: center;
 }
 
@@ -38,3 +45,34 @@ a {
     color: #333333;
 }
 
+#button-create {
+    margin-top: 20px;
+}
+
+#create-containter {
+    margin-top: 5%;
+    text-align: center;
+}
+
+#description {
+    height: 50px;
+}
+
+#show-task {
+    margin-top: 5%;
+}
+#button-center-all {
+    margin-top: 10%;
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+
+#button-center-all {
+    margin-top: 10%;
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+
+#password {
+    -webkit-text-security: disc;
+}

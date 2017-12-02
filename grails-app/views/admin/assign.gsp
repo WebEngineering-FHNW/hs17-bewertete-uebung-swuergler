@@ -1,21 +1,60 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="form" content="main"/>
+    <meta name="layout" content="main" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'bootstrap.css')}">
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'task_assigned.css')}">
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'card.css')}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <title>
-        All tasks
+        Assign open tasks
     </title>
 </head>
 <body>
 
-<table border="1">
-    <g:each in="${tasksToAssign}" var="thisTask">
-            <li>${ thisTask.taskTitle }</li>
-            <li>${ thisTask.taskDescription }</li>
-            <li>${ thisTask.assignee }</li>
-    </g:each>
-</table>
+    <content tag="nav">
+        <div id="nav-left">
+            <a href="/task/allTasks"><img src="${resource(dir: 'images', file: 'task_roulette.png')}" height="25"></a>
+        </div>
+
+        <ul class="nav nav-pills">
+
+            <li role="presentation"><a href="/logout">Logout</a></li>
+            <li role="presentation"><a href="../../about/index">About</a></li>
+        </ul>
+    </content>
+
+    <g:if test="${tasksToAssign.isEmpty()}">
+        <div id="no-tasks">
+            <h1>Ooops there are no tasks to assign…</h1>
+            <br>
+            <h5>Why don't you go ahead and create a new one?</h5>
+                <div id="buttons-bottom" class="btn-group" role="group" aria-label="...">
+                    <a href="../task/create"><button type="button" class="btn btn-success"><h4>create a new task</h4></button></a>
+                    <a href="../task/allTasks"><button type="button" class="btn btn-primary"><h4>show all tasks</h4></button></a>
+                </div>
+        </div>
+
+    </g:if>
+    <g:else>
+        <div id="all-tasks">
+        <h1>Following tasks were assigned</h1>
+        <div id="all-cards">
+            <g:each in="${tasksToAssign}" var="thisTask">
+                <div class="card">
+                    <div class="single-card">
+                        <h3><b>${ thisTask.taskTitle }</b></h3>
+                        <p>${ thisTask.taskDescription }</p>
+                        <h2>${ thisTask.assignee }</h2>
+                    </div>
+                </div>
+            </g:each>
+        </div>
+        <div id="button-center-all">
+            <a href="../task/allTasks"><button type="button" class="btn btn-success"><h4>show all tasks</h4></button></a>
+        </div>
+        </div>
+    </g:else>
 
 </body>
 </html>

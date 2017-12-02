@@ -27,12 +27,12 @@ class BootStrap {
             UserRole.create(user,userRole, true)
         }
 
-        save(new Task(taskTitle: "empty bin", taskDescription: "empty all bins in office", done: false))
-        save(new Task(taskTitle: "clean room", taskDescription: "clean office room", done: false))
+        save(new Task(taskTitle: "empty bin", taskDescription: "empty all bins in office until the next Friday afternoon", done: false, assignee: user))
+        save(new Task(taskTitle: "clean room", taskDescription: "clean office room during the next lunch", done: false))
         save(new Task(taskTitle: "bake a cake", taskDescription: "bake a cake for the birthday of jane", done: false))
         save(new Task(taskTitle: "make a reservation", taskDescription: "make a reservation for the meeting with the customer at the restaurant", done: false))
         save(new Task(taskTitle: "pickup new office supplies", taskDescription: "pick up the recently arrived office supplies at the store", done: false))
-        save(new Task(taskTitle: "wash car", taskDescription: "wash the car of the boss", done: false, assignee: user))
+        save(new Task(taskTitle: "wash car", taskDescription: "wash the car of the boss", done: false))
 
     }
 

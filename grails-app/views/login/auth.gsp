@@ -2,40 +2,40 @@
 <head>
     <meta name="layout" content="${gspLayout ?: 'main'}"/>
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'bootstrap.css')}">
-    <title><g:message code='springSecurity.login.title'/></title>
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'login.css')}">
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'card.css')}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <title>
+        Task roulette login
+    </title>
 </head>
 
 <body>
-<div id="login">
-    <div class="inner">
-        <div class="fheader"><g:message code='springSecurity.login.header'/></div>
+    <content tag="nav">
+        <div id="nav-left">
+            <a href="../.."><img src="${resource(dir: 'images', file: 'task_roulette.png')}" height="25"></a>
+        </div>
 
-        <g:if test='${flash.message}'>
-            <div class="login_message">${flash.message}</div>
-        </g:if>
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="../../about/index">About</a></li>
+        </ul>
+    </content>
 
+    <h1>Login</h1>
+
+<div class="container">
+    <div class="login-container">
         <form action="${postUrl ?: '/login/authenticate'}" method="POST" id="loginForm" class="cssform" autocomplete="off">
             <p>
-                <label for="username"><g:message code='springSecurity.login.username.label'/>:</label>
-                <input type="text" class="text_" name="${usernameParameter ?: 'username'}" id="username"/>
-            </p>
-
-            <p>
-                <label for="password"><g:message code='springSecurity.login.password.label'/>:</label>
-                <input type="password" class="text_" name="${passwordParameter ?: 'password'}" id="password"/>
-            </p>
-
-            <p id="remember_me_holder">
-                <input type="checkbox" class="chk" name="${rememberMeParameter ?: 'remember-me'}" id="remember_me" <g:if test='${hasCookie}'>checked="checked"</g:if>/>
-                <label for="remember_me"><g:message code='springSecurity.login.remember.me.label'/></label>
-            </p>
-
-            <p>
-                <input type="submit" id="submit" value="${message(code: 'springSecurity.login.button')}"/>
+            <input name="${usernameParameter ?: 'username'}" id="username" type="text" placeholder="username">
+            <input name="${passwordParameter ?: 'password'}" id="password" type="password" placeholder="password">
+            <button class="btn btn-primary btn-block login" type="submit" id="submit" value="${message(code: 'springSecurity.login.button')}">Login</button>
             </p>
         </form>
     </div>
 </div>
+
+
 <script>
     (function() {
         document.forms['loginForm'].elements['${usernameParameter ?: 'username'}'].focus();

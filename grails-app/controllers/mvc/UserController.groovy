@@ -6,7 +6,9 @@ import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
-@Secured(['ROLE_ADMIN'])
+
+// Actually bad idea to make it anonymously, just for this project, so a new user can be created without login
+@Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
 class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

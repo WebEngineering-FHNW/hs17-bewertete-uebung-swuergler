@@ -28,11 +28,13 @@
     <div id="all-cards">
         <g:each in="${allTasks}" var="thisTask">
                 <div class="card">
-                    <div class="single-card">
-                        <h3><b>${ thisTask.taskTitle }</b></h3>
-                        <p>${ thisTask.taskDescription }</p>
-                        <p> <h2>${ thisTask.assignee }</h2></p>
-                    </div>
+                    <a href="../task/show/${ thisTask.id }">
+                        <div class="single-card">
+                            <h3><b>${ thisTask.taskTitle }</b></h3>
+                            <p>${ thisTask.taskDescription }</p>
+                            <h2>${ thisTask.assignee }</h2>
+                        </div>
+                    </a>
                 </div>
         </g:each>
     </div>

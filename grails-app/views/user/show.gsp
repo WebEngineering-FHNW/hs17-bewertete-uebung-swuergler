@@ -2,30 +2,39 @@
 <html>
     <head>
         <meta name="layout" content="main" />
+        <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'bootstrap.css')}">
+        <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'new_task.css')}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#show-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+        <content tag="nav">
+            <div id="nav-left">
+                <a href="/task/allTasks"><img src="${resource(dir: 'images', file: 'task_roulette.png')}" height="25"></a>
+            </div>
+
+            <ul class="nav nav-pills">
+
+                <li role="presentation"><a href="/logout">Logout</a></li>
+                <li role="presentation"><a href="../../about/index">About</a></li>
             </ul>
-        </div>
+        </content>
+
+        <h1>Task roulette</h1>
+
+        <br>
         <div id="show-user" class="content scaffold-show" role="main">
-            <h1><g:message code="default.show.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <f:display bean="user" />
-            <g:form resource="${this.user}" method="DELETE">
-                <fieldset class="buttons">
-                    <g:link class="edit" action="edit" resource="${this.user}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-                    <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-                </fieldset>
-            </g:form>
+            <h5>
+                The user
+                <b><f:display bean="user" property="username"/></b>
+                has been created
+            </h5>
         </div>
+
+        <div id="button-center-all">
+            <a href="../../../task/allTasks"><button type="button" class="btn btn-success"><h4>start now</h4></button></a>
+        </div>
+
     </body>
 </html>

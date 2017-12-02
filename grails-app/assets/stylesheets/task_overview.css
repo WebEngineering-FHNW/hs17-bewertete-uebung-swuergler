@@ -46,10 +46,26 @@ h4 {
 
 a {
     color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333333;
+    text-decoration: none;
 }
 
 #buttons-bottom {
     margin-top: 5%;
     margin-left: 30%;
+    margin-bottom: 10%;
+}
+
+#main-content {
+    margin-left: 30%;
+}
+
+#button-take-back {
+    margin-top: 10%;
+    margin-left: 45%;
     margin-bottom: 10%;
 }

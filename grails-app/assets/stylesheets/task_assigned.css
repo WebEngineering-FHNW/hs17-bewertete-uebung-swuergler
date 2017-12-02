@@ -1,0 +1,81 @@
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h5 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h6 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+#content {
+    margin-left: 10%;
+    margin-top: 20%
+}
+
+#nav-left {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.nav {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#all-cards {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 30px;
+}
+
+a {
+    color: #333333;
+}
+
+#buttons-bottom {
+    margin-top: 10%;
+    margin-left: 38%;
+    margin-bottom: 10%;
+}
+
+#button-center-all {
+    margin-top: 10%;
+    margin-left: 45%;
+    margin-bottom: 10%;
+}
+
+
+#no-tasks {
+    margin-top: 5%;
+}
+
+#all-tasks {
+    margin-top: 5%;
+}
