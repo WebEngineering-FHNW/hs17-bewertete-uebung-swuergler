@@ -16,5 +16,15 @@ h1 {
 }
 
 #nav-left {
-    alignment: left;
+    position: fixed;
+    top: 15px;
+    left: 10px;
+}
+
+.nav {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

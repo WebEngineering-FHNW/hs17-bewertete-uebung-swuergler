@@ -2,28 +2,38 @@
 <html>
     <head>
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'task.label', default: 'Task')}" />
-        <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'bootstrap.css')}">
+        <link rel="stylesheet" type="text/css" href="${resource(dir: 'stylesheets', file: 'new_task.css')}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <title>
+            Create a new task
+        </title>
     </head>
     <body>
-        <a href="#create-task" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+        <content tag="nav">
+            <div id="nav-left">
+                <a href="/task/allTasks"><img src="${resource(dir: 'images', file: 'task_roulette.png')}" height="25"></a>
+            </div>
+
+            <ul class="nav nav-pills">
+
+                <li role="presentation"><a href="/logout">Logout</a></li>
+                <li role="presentation"><a href="../../about/index">About</a></li>
             </ul>
-        </div>
+        </content>
+
+        <h1>Create a new task</h1>
+
         <div id="create-task" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
+                <div class="message" role="status">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${this.task}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${this.task}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
+                <ul class="errors" role="alert">
+                    <g:eachError bean="${this.task}" var="error">
+                        <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                    </g:eachError>
+                </ul>
             </g:hasErrors>
             <g:form action="save">
                 <fieldset class="form">
@@ -34,5 +44,6 @@
                 </fieldset>
             </g:form>
         </div>
+
     </body>
 </html>

@@ -11,21 +11,19 @@
 <body>
     <content tag="nav">
         <div id="nav-left">
-            <img src="../assets/images/task_roulette.png">
+            <a href="/"><img src="${resource(dir: 'images', file: 'task_roulette.png')}" height="25"></a>
         </div>
 
-        <div id="nav-right">
-            <a href="/task/allTasks.gsp">Login</a>
-            <a href="/logout">Logout</a>
-            <a href="../../about/index">About</a>
-        </div>
-
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="/task/allTasks">Login</a></li>
+            <li role="presentation"><a href="/logout">Logout</a></li>
+            <li role="presentation"><a href="../../about/index">About</a></li>
+        </ul>
     </content>
 
     <div id="content" role="main">
         <section>
             <h1>Task roulette</h1>
-
             <p>
                 If you've ever faced the problem of assigning tasks that no one likes<br>
                 to do there's a simple solution now. <b>Task roulette</b> is a simple and easy<br>
@@ -39,7 +37,7 @@
 
 
 
-        <a href="user/create.gsp"><button type="button" class="btn btn-primary">Sign up for free</button></a>
+        <a href="user/create"><button type="button" class="btn btn-primary">Sign up for free</button></a>
 
     </div>
 

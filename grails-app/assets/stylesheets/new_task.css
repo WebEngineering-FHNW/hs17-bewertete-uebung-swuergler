@@ -1,0 +1,40 @@
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#nav-left {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.nav {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a {
+    color: #333333;
+}
+
