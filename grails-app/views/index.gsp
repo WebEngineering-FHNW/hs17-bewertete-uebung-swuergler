@@ -27,9 +27,9 @@
             <p>
                 If you've ever faced the problem of assigning tasks that no one likes<br>
                 to do there's a simple solution now. <b>Task roulette</b> is a simple and easy<br>
-                and easy to use task distribution service. It was created as part of the <br>
+                to use task distribution service. It was created as part of the <br>
                 web engineering class at the Fachhochschule Nordwestschweiz.<br>
-                Join task roulette now it is free available<br>
+                Join task roulette now, it is free available.<br>
             </p>
         </section>
 
