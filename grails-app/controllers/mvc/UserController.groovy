@@ -20,6 +20,8 @@ class UserController {
     }
 
     def show(User user) {
+        def role = Role.findOrSaveWhere(authority: 'ROLE_USER')
+        UserRole.create(user, role, true)
         respond user
     }
 

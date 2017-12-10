@@ -23,8 +23,11 @@ class BootStrap {
             UserRole.create(admin,adminRole,true)
         }
 
-        if(!user.authorities.contains(adminRole)){
+        if(!user.authorities.contains(userRole)){
             UserRole.create(user,userRole, true)
+            UserRole.create(user2,userRole, true)
+            UserRole.create(user3,userRole, true)
+            UserRole.create(user4,userRole, true)
         }
 
         save(new Task(taskTitle: "empty bin", taskDescription: "empty all bins in office until the next Friday afternoon", done: false, assignee: user))
