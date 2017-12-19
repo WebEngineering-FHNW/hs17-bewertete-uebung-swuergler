@@ -35,7 +35,7 @@
         Join task roulette now, it is free available.<br>
         </p>
         <ul>
-            <li>Every user of allmende can create tasks with a title and description</li>
+            <li>Every user of task roulette can create tasks with a title and description</li>
             <li>Every user can see the tasks that were created</li>
             <li>The administrator can assign the tasks randomly to the different users</li>
             <li>Every user can see the assignee of each task</li>

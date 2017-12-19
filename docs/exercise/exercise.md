@@ -32,13 +32,13 @@ How to start the project: (if other than `grailsw run-app`)
 
 How to test the project:  (if other than `grailsw test-app`)
 
-Project description:      (if other than `/index.html`)
+Project description:      (if other than `/about/index`) Errors form the validator because of reference to the css file with ${ressource}, doesn't work with normal href
 
-External contributions:
+External contributions:   –  
 
-Other comments: 
+Other comments:           –  
 
-I'm particular proud of:
+I'm particular proud of:  Design
 
 
 ## Project grading 
