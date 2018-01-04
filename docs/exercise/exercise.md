@@ -43,4 +43,49 @@ I'm particular proud of:  Design
 
 ## Project grading 
 
-< to be filled by lecturer>
+Description given as part of the app (not as static html).
+Some issues with html validity (e.g. div as child of ul).
+Kudos for trying to use the semantic tag "content" but it is misplaced here since it 
+covers the navigation, not the content.
+
+The application works fine. 
+NB: When logged in as non-admin, the "assign open tasks" button is shown but leads to
+access denied when clicked on. I assume that this is by design - but it is better UX
+to not show the button in such cases or even better, showing it disabled.
+What is somehow missing is a "my tasks" view.
+
+Functionality:
+Create/List for task domain plus user, role, and user/role mapping for role-based security.
+Two filters for task list: all/unassigned.
+Admin: random assignment of tasks.
+Access restrictions based on roles.
+Custom error pages.
+User input is correctly html-escaped when rendered (avoids XSS attacks).
+
+Engineering:
+Commit log is ok.
+Minimal tests for user/role.
+HTML validation tends to have some issues (ul nesting in navigataion, role="alert"?).
+Commenting is sparse but the code is pretty much self-explaining.
+Naming is ok.
+The views tend to have more duplication than needed.
+There are a few dependencies but those are mostly standard (spring security) or
+for beautification only.
+NB: I like the way that you coded the TaskController.
+
+I award an extra point for the technical challenge of using role-based security,
+which we did not cover in the module.
+Another extra point is awarded for the design of the landing page. 
+
+Congratulations!
+You have created good-looking, multi-user, distributed, DB-based web application
+from scratch all on your own. It would have been perfect had it come with better
+testing and more attention to html validity.
+
+Total Grade: 5.9
+
+
+
+
+
+
